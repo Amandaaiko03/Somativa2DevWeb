@@ -3,13 +3,19 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBAXfQn9T-i5kn7OJTBCWIukm4BHIcIv2k",
-    authDomain: "desenvolvimentoweb-pucpr.firebaseapp.com",
-    projectId: "desenvolvimentoweb-pucpr",
-    storageBucket: "desenvolvimentoweb-pucpr.appspot.com",
-    messagingSenderId: "247789543440",
-    appId: "1:247789543440:web:22280088401164290fea95"
-  };
+  apiKey: "AIzaSyDWzShfTqnNKW12XahUHdcMWAXdc2i8hRg",
+  authDomain: "desenvolvimentoweb-pucpr-4e327.firebaseapp.com",
+  projectId: "desenvolvimentoweb-pucpr-4e327",
+  storageBucket: "desenvolvimentoweb-pucpr-4e327.firebasestorage.app",
+  messagingSenderId: "551790709216",
+  appId: "1:551790709216:web:d05c0bdf380a3d6d638385"
+};
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+
+export { db, auth };
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
